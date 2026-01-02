@@ -13,7 +13,7 @@ bool isSortedBruteForce(int nums[], int size)
         for (int nextIdx = currentIdx + 1; nextIdx < size; nextIdx++)
         {
             // If any future element is smaller than the current one, it's unsorted
-            if (nums[nextIdx] < nums[currentIdx])
+            if (nums[currentIdx] > nums[nextIdx])
                 return false;
         }
     }
