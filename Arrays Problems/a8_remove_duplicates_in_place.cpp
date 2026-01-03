@@ -30,31 +30,30 @@ int removeInPlaceDuplicatesUsingHashSet(vector<int> &nums)
     return index;
 }
 
-// Function to remove duplicates from sorted array in-place
-int removeDuplicatesUsingBruteForce(vector<int> &nums)
+// Removes duplicates from a sorted array in-place.
+int removeDuplicates(vector<int> &nums)
 {
-    // If array is empty, return 0 directly
     if (nums.empty())
-        return 0;
-
-    // Pointer for the position of last unique element
-    int i = 0;
-
-    // Traverse the array starting from the second element
-    for (int j = 1; j < nums.size(); j++)
     {
-        // If current element is different from last unique element
-        if (nums[j] != nums[i])
+        return 0;
+    }
+
+    // Tracks the index of the last confirmed unique element
+    int writeIndex = 0;
+
+    // Iterate through the array to find new unique elements
+    for (int readIndex = 1; readIndex < nums.size(); readIndex++)
+    {
+        // Compare current element with the last known unique element
+        if (nums[readIndex] != nums[writeIndex])
         {
-            // Move pointer for unique element forward
-            i++;
-            // Place the new unique element at the next position
-            nums[i] = nums[j];
+            writeIndex++;
+            nums[writeIndex] = nums[readIndex];
         }
     }
 
-    // i is index of last unique element, count = i + 1
-    return i + 1;
+    // The count of unique elements is the last index + 1
+    return writeIndex + 1;
 }
 
 int main()
