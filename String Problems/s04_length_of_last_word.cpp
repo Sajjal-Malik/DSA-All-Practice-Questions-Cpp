@@ -1,6 +1,5 @@
-#include <iostream>
-#include <string>
-#include <algorithm>
+#include <bits/stdc++.h>
+using namespace std;
 
 /**
  * Calculates the length of the last word in a string by manually

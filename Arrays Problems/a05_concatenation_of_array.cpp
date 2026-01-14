@@ -1,8 +1,5 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 /**
  * Standard approach: uses reserve() and push_back().
  * Good for readability and general use.

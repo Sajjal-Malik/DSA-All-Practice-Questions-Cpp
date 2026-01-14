@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cmath> // Required for abs()
-
+#include <bits/stdc++.h>
 using namespace std;
 
 /**
